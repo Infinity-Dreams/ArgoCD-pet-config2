@@ -9,14 +9,14 @@ spec:
   source:
     repoURL: https://github.com/YuriiDiduk/ArgoCD-pet-config2.git
     targetRevision: HEAD
-    path: app
+    path: kustomize
   destination: 
     server: https://kubernetes.default.svc
     namespace: dev
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=false
+    - CreateNamespace=true
 
     automated:
       selfHeal: true
