@@ -7,16 +7,16 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YuriiDiduk/ArgoCD-pet-config.git
+    repoURL: https://github.com/YuriiDiduk/ArgoCD-pet-config2.git
     targetRevision: HEAD
-    path: prod
+    path: app
   destination: 
     server: https://kubernetes.default.svc
     namespace: dev
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+    - CreateNamespace=false
 
     automated:
       selfHeal: true
